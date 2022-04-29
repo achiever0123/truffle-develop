@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "declaration": true,
+    "target": "es2016",
+    "downlevelIteration": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "lib": [
+      "es2019"
+    ],
+    "paths": {
+      "@truffle/codec": [
+        "./lib"
+      ],
+      "@truffle/codec/*": [
+        "./lib/*"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": "*"
+      }
+    ],
+    "rootDir": ".",
+    "typeRoots": [
+      "./typings",
+      "../../**/node_modules/@types/bn.js",
+      "../../**/node_modules/@types/debug",
+      "../../**/node_modules/@types/lodash"
+    ]
+  },
+  "include": [
+    "./lib/**/*.ts",
+    "./typings/**/*.d.ts"
+  ]
+}

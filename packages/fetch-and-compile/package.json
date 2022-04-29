@@ -1,0 +1,62 @@
+{
+  "name": "@truffle/fetch-and-compile",
+  "description": "Used to obtain external verified sources and compile them",
+  "license": "MIT",
+  "author": "Harry Altman <harry@trufflesuite.com>",
+  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/fetch-and-compile#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trufflesuite/truffle.git",
+    "directory": "packages/fetch-and-compile"
+  },
+  "bugs": {
+    "url": "https://github.com/trufflesuite/truffle/issues"
+  },
+  "version": "0.5.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn build",
+    "test": "yarn build && mocha --exit -r ts-node/register test/**/*.test.ts --timeout 35000"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@truffle/codec": "^0.12.10",
+    "@truffle/compile-solidity": "^6.0.25",
+    "@truffle/config": "^1.3.28",
+    "@truffle/source-fetcher": "^1.0.3",
+    "debug": "^4.3.2",
+    "semver": "^7.3.5",
+    "web3-utils": "1.5.3"
+  },
+  "devDependencies": {
+    "@truffle/compile-common": "^0.7.31",
+    "@types/chai": "^4.2.22",
+    "@types/debug": "^4.1.7",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.6",
+    "@types/semver": "^7.3.9",
+    "chai": "^4.2.0",
+    "mocha": "9.2.2",
+    "ts-node": "10.7.0",
+    "typescript": "^4.1.4"
+  },
+  "keywords": [
+    "compile",
+    "ethereum",
+    "etherscan",
+    "ipfs",
+    "solidity",
+    "sourcify",
+    "verify-source"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
